@@ -1,32 +1,62 @@
-% LaTeX file for resume 
-% This file uses the resume document class (res.cls)
-
 \documentclass{res} 
 \usepackage{hyperref}
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
 \setlength{\textheight}{9.5in} % increase text height to fit on 1-page 
 
 \begin{document}
 
 \name{JOSH GHILONI\\[12pt]}     % the \\[12pt] adds a blank line after name      
-\address{17357 West 95th Avenue\\
-Arvada, CO 80007}
+\address{617 Honey Creek Road West\\
+Bellville, Ohio 44813}
 
-\address{(720) 432-0584\\
+\address{(303) 590-5427\\
 ghiloni@gmail.com}
 
 \begin{resume}
 
 \section{OBJECTIVE}          
-    To change the world, of course. I want to help developers find their value line, and provide them solutions and tools to stay above it. 
+    To change the world, of course. I want to help developers and operators find their value line, and provide them solutions and tools to stay above it. 
   
 \section{EXPERIENCE}
    \vspace{-0.1in}	
-
    \begin{tabbing}
-   \hspace{2.9in}\= \hspace{2in}\= \kill % set up two tab positions
-   {\bf Staff Solutions Architect} \> VMware, Inc. \> July 2017–Present
+   \hspace{2.9in}\= \hspace{1.9in}\= \kill % set up two tab positions
+   {\bf Principal Software Engineer} \> realtor.com \> March 2022-Present
+   \end{tabbing}\vspace{-10pt}
+    I was hired at RDC to be the technical lead for the SRE team. We were a small
+    team of primarily young engineers, and my goal was to impart my knowledge of SRE
+    practices obtained from direct experience and from teaching other teams how to 
+    effectively implement the teachings in their own organizations.
+
+    After a reorganization in September 2022, our team became focused on quality for
+    the consumer-facing parts of the site. This entailed maintaining and improving 
+    several internal testing tools, including k6 for performance testing, and 
+    Sitespeed.io for core web vital testing. In addition, we provide reporting tools
+    for product quality, including Avalability reporting, defect burndowns, and SEO 
+    scores. We do this primarily by maintaining tools that extract data from various
+    sources of truth and capturing summarized reports in a data warehouse. 
+
+    In addition to these primary responsibilities, as the technical lead and senior member
+    of the team, I act as a liaison between management and the team. This involves parsing
+    often ambiguous requirements from management and converting them into actionable steps
+    for these young, talented engineers. I also have enjoyed the opportunity to unofficially
+    mentor each of them, both individually and as a group. This involves distilling 
+    complex technical requirements with them, teaching them new skills--as an example, we
+    are currently undertaking a migration of our tools from Jenkins and Amazon ECS-based
+    depoyments to Kubernetes deployments, powered by CircleCI and ArgoCD, and acting as a 
+    guide as they navigate life in a corporate environment, often for the first time in 
+    their careers.
+   
+   \begin{tabbing}
+   \hspace{1.7in}\= \hspace{3.5in}\= \kill % set up two tab positions
+   {\bf Founder} \> Ghiloni Ideaworx Multimedia Solutions \> 2022-Present
+   \end{tabbing}\vspace{-10pt}
+    Ghiloni Ideaworx is an umbrella organization for my various side endeavors, including
+    intermittent independent consulting, focused usually around CI/CD solutions. In
+    addition, it is branching out into custom woodworking commissions.
+         
+   \begin{tabbing}
+   \hspace{2.7in}\= \hspace{1.8in}\= \kill % set up two tab positions
+   {\bf Staff Solutions Architect} \> VMware, Inc. \> July 2017–February 2022
    \end{tabbing}\vspace{-10pt}
     Along with my world-class team of client-facing Solutions Architects as
     part of VMware Tanzu Labs (formerly Pivotal Labs), I'm helping my clients transform the way they build
@@ -74,21 +104,28 @@ ghiloni@gmail.com}
     other technologies (ActiveX, Flash, etc)
 
 \section{SKILLS}          
-    {\bf Programming Languages}: Go, Java, BASH, Python, Ruby, NodeJS \\
-    {\bf CI/CD}: Concourse CI, Jenkins, Travis CI, CircleCI, Github Actions \\
-    {\bf Monitoring \& Logging}: Prometheus, VMware Tanzu Observability by Wavefront,
-    InfluxDB, Telegraf, Logstash, Grafana, Kibana, ElasticSearch
+    {\bf Programming Languages}: Go, Typescript (full-stack), Java, BASH, Python, Ruby \\
+    {\bf CI/CD}: Concourse CI, CircleCI, ArgoCD, Jenkins, Github Actions \\
+    {\bf Monitoring \& Logging}: InfluxDB, Prometheus, Grafana, AWS Cloudwatch
 
 \section{CERTIFICATIONS}
     {\bf Certified Kubernetes Administrator} \\
     Certification Number CKA-2000-007976-0100 \\
-    Expires May 2023
+    Earned May 2020
 
     {\bf Certified Kubernetes Application Developer} \\
     Certification Number CKAD-2000-003980-0100 \\
-    Expires May 2023
+    Earned May 2020
+
+    {\bf Certified Kubernetes Security Specialist} \\
+    Certification Number LF-2qktgivcfa \\
+    Earned July 2021
  
-\section{SELECTED SPEAKING}          
+\section{SELECTED SPEAKING}
+    {\bf April 2022} \\
+    Internal realtor.com technical conference - Techcelerate \\
+    On the Benefits of Building and Maintaining a Balanced Product Team
+
     {\bf April 2019} \\
     Cloud Foundry Summit North America \\
     \href{https://youtu.be/ydswsuidHn4}{Cracks in the Foundation}
@@ -96,12 +133,6 @@ ghiloni@gmail.com}
     {\bf June 2017} \\
     Cloud Foundry Summit North America \\
     \href{https://youtu.be/dmUSqX0ELGc}{Using BOSH Addons to Customize your CF Experience}
-
-    {\bf 2015–2017} \\
-    Various Cloud Foundry and Java User Group meetups \\
-    Denver, Minneapolis, St. Louis \\
-    Focused on Spring Boot, Spring Cloud, and their integrations with Cloud Foundry \\
-    Some slide decks available, but none were recorded
 
 \section{REFERENCES}
     Available upon request
