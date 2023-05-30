@@ -33,16 +33,19 @@ ghiloni@gmail.com}
     Sitespeed.io for core web vital testing. In addition, we provide reporting tools
     for product quality, including Avalability reporting, defect burndowns, and SEO 
     scores. We do this primarily by maintaining tools that extract data from various
-    sources of truth and capturing summarized reports in a data warehouse. 
+    sources of truth and capturing summarized reports in a data warehouse.
+
+    We have worked to migrate existing tools from a primarily AWS ECS-based deployment 
+    strategy to EKS-based deployments, and I have enjoyed mentoring my team on basic
+    k8s topics like RBAC and scheduling, and more advanced topics like custom resource
+    definitions and operators.
 
     In addition to these primary responsibilities, as the technical lead and senior member
     of the team, I act as a liaison between management and the team. This involves parsing
     often ambiguous requirements from management and converting them into actionable steps
     for these young, talented engineers. I also have enjoyed the opportunity to unofficially
     mentor each of them, both individually and as a group. This involves distilling 
-    complex technical requirements with them, teaching them new skills--as an example, we
-    are currently undertaking a migration of our tools from Jenkins and Amazon ECS-based
-    depoyments to Kubernetes deployments, powered by CircleCI and ArgoCD, and acting as a 
+    complex technical requirements with them, teaching them new skills, and acting as a 
     guide as they navigate life in a corporate environment, often for the first time in 
     their careers.
    
@@ -51,27 +54,34 @@ ghiloni@gmail.com}
    {\bf Founder} \> Ghiloni Ideaworx Multimedia Solutions \> 2022-Present
    \end{tabbing}\vspace{-10pt}
     Ghiloni Ideaworx is an umbrella organization for my various side endeavors, including
-    intermittent independent consulting, focused usually around CI/CD solutions. In
-    addition, it is branching out into custom woodworking commissions.
+    intermittent independent consulting, focused usually around CI/CD solutions.
+
+    My current project is the \href{https://github.com/gideaworx/terraform-exporter}{Terraform Exporter},
+    a Go-based tool that will allow developers to write plugins to export data that can be managed 
+    by Terraform into HCL files; allowing them to use their favorite UIs to create things
+    like New Relic monitors and Grafana dashboards and still manage them with terraform. It is
+    written in Go but allows plugins to be written in any language that can communicate over gRPC.
+    The plugins can be listed in a registry for easy installation, and is viewable through a custom
+    React-based webapp.
          
    \begin{tabbing}
    \hspace{2.7in}\= \hspace{1.8in}\= \kill % set up two tab positions
    {\bf Staff Solutions Architect} \> VMware, Inc. \> July 2017–February 2022
    \end{tabbing}\vspace{-10pt}
     Along with my world-class team of client-facing Solutions Architects as
-    part of VMware Tanzu Labs (formerly Pivotal Labs), I'm helping my clients transform the way they build
-    and run software platforms. My job entails shepherding a team of client 
+    part of VMware Tanzu Labs (formerly Pivotal Labs), I helped my clients transform the way they build
+    and run software platforms. My job entailed shepherding a team of client 
     platform engineers, product managers, and designers through their journey 
     in deploying and effectively using the VMware Tanzu suite and delivering value
-    to their customers, which are usually in-house development teams. I focus on building 
+    to their customers, which are usually in-house development teams. I focused on building 
     Site Reliability Engineering compentencies, as well fostering automation-first, 
     security-first architectures.
 
-    Since May 2020, I have been leading the delivery of a small in-house SRE team as we pilot
-    a new managed service offering for our customers. In this capacity, I have been
+    From May 2020 until my departure in early 2022, I led the delivery of a small in-house SRE team as we piloted
+    a new managed service offering for our customers. In this capacity, I was 
     able to take the SRE knowledge that we impart to our customer SRE teams,
     implement it myself, and work to continously improve upon that knowledge
-    base. I lead incident post-mortems with our customers, as well as keep them
+    base. I led incident post-mortems with our customers, as well as kept them
     up to date on the health and status of their platform.
 
    \begin{tabbing}
