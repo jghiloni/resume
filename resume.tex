@@ -1,151 +1,182 @@
-\documentclass{res} 
+\documentclass{res}
 \usepackage{hyperref}
-\setlength{\textheight}{9.5in} % increase text height to fit on 1-page 
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
 
 \begin{document}
 
-\name{JOSH GHILONI\\[12pt]}     % the \\[12pt] adds a blank line after name      
-\address{617 Honey Creek Road West\\
-Bellville, Ohio 44813}
-
-\address{(303) 590-5427\\
-ghiloni@gmail.com}
+\name{\LARGE{Josh Ghiloni}}
+\address{(303) 590-5427}
+\address{ghiloni@gmail.com}
 
 \begin{resume}
 
-\section{OBJECTIVE}          
-    To change the world, of course. I want to help developers and operators find their value line, and provide them solutions and tools to stay above it. 
-  
-\section{EXPERIENCE}
-   \vspace{-0.1in}	
-   \begin{tabbing}
-   \hspace{2.9in}\= \hspace{1.9in}\= \kill % set up two tab positions
-   {\bf Principal Software Engineer} \> realtor.com \> March 2022-Present
-   \end{tabbing}\vspace{-10pt}
-    I was hired at RDC to be the technical lead for the SRE team. We were a small
-    team of primarily young engineers, and my goal was to impart my knowledge of SRE
-    practices obtained from direct experience and from teaching other teams how to 
-    effectively implement the teachings in their own organizations.
+\section{OBJECTIVE}\vspace{10pt}
+To change the world, of course. I have nearly three decades of experience in the
+technology space and I am obsessed with using that acquired experience and skill
+to make people's lived experiences more rewarding and comfortable.
 
-    After a reorganization in September 2022, our team became focused on quality for
-    the consumer-facing parts of the site. This entailed maintaining and improving 
-    several internal testing tools, including k6 for performance testing, and 
-    Sitespeed.io for core web vital testing. In addition, we provide reporting tools
-    for product quality, including Avalability reporting, defect burndowns, and SEO 
-    scores. We do this primarily by maintaining tools that extract data from various
-    sources of truth and capturing summarized reports in a data warehouse.
+\section{SELECTED WORK EXPERIENCE}\vspace{10pt}
 
-    We have worked to migrate existing tools from a primarily AWS ECS-based deployment 
-    strategy to EKS-based deployments, and I have enjoyed mentoring my team on basic
-    k8s topics like RBAC and scheduling, and more advanced topics like custom resource
-    definitions and operators.
+\employer{\textbf{Havrion, LLC}}
+\title{\textbf{VP of Engineering / Chief Programmer}}
+\dates{\textbf{August 2024 – November 2025}}
+\location{}
+\begin{position}
+Havrion is a company in the digital signage space with a simple value proposition:
+You've already spent a ton of money on your displays; you shouldn't need to spend
+more on hardware to make it do what you want it to do.
 
-    In addition to these primary responsibilities, as the technical lead and senior member
-    of the team, I act as a liaison between management and the team. This involves parsing
-    often ambiguous requirements from management and converting them into actionable steps
-    for these young, talented engineers. I also have enjoyed the opportunity to unofficially
-    mentor each of them, both individually and as a group. This involves distilling 
-    complex technical requirements with them, teaching them new skills, and acting as a 
-    guide as they navigate life in a corporate environment, often for the first time in 
-    their careers.
-   
-   \begin{tabbing}
-   \hspace{1.7in}\= \hspace{3.5in}\= \kill % set up two tab positions
-   {\bf Founder} \> Ghiloni Ideaworx Multimedia Solutions \> 2022-Present
-   \end{tabbing}\vspace{-10pt}
-    Ghiloni Ideaworx is an umbrella organization for my various side endeavors, including
-    intermittent independent consulting, focused usually around CI/CD solutions.
+When I began there, Havrion was tightly coupled to the Samsung ecosystem, with its
+solution running on the Samsung commercial display System-on-a-chip (SOC). My charge
+was to bring modern software practices to a firm that is largely based in the
+hardware world. As part of that charge, I brought the Lean Product Management
+ceremonies learned from my time at Pivotal, as well as modern concepts such as
+continous delivery and observability.
 
-    My current project is the \href{https://github.com/gideaworx/terraform-exporter}{Terraform Exporter},
-    a Go-based tool that will allow developers to write plugins to export data that can be managed 
-    by Terraform into HCL files; allowing them to use their favorite UIs to create things
-    like New Relic monitors and Grafana dashboards and still manage them with terraform. It is
-    written in Go but allows plugins to be written in any language that can communicate over gRPC.
-    The plugins can be listed in a registry for easy installation, and is viewable through a custom
-    React-based webapp.
-         
-   \begin{tabbing}
-   \hspace{2.7in}\= \hspace{1.8in}\= \kill % set up two tab positions
-   {\bf Staff Solutions Architect} \> VMware, Inc. \> July 2017–February 2022
-   \end{tabbing}\vspace{-10pt}
-    Along with my world-class team of client-facing Solutions Architects as
-    part of VMware Tanzu Labs (formerly Pivotal Labs), I helped my clients transform the way they build
-    and run software platforms. My job entailed shepherding a team of client 
-    platform engineers, product managers, and designers through their journey 
-    in deploying and effectively using the VMware Tanzu suite and delivering value
-    to their customers, which are usually in-house development teams. I focused on building 
-    Site Reliability Engineering compentencies, as well fostering automation-first, 
-    security-first architectures.
+I also strived to widen our total addressable market by freeing us from the tight
+bonds with Samsung and moving us to a hardware-agnostic solution. I was nearing
+completion of the first iteration of that effort in November 2025, when a reorganization
+from Havrion's parent company eliminated my position.
+\end{position}
 
-    From May 2020 until my departure in early 2022, I led the delivery of a small in-house SRE team as we piloted
-    a new managed service offering for our customers. In this capacity, I was 
-    able to take the SRE knowledge that we impart to our customer SRE teams,
-    implement it myself, and work to continously improve upon that knowledge
-    base. I led incident post-mortems with our customers, as well as kept them
-    up to date on the health and status of their platform.
+\employer{\textbf{Realtor.com}}
+\title{\textbf{Principal Software Engineer}}
+\dates{\textbf{March 2022 – January 2024}}
+\location{}
+\begin{position}
+I was hired at RDC to be the technical lead for the SRE team. We were a small
+team of primarily young engineers, and my goal was to impart my knowledge of SRE
+practices obtained from direct experience and from teaching other teams how to
+effectively implement the teachings in their own organizations.
 
-   \begin{tabbing}
-   \hspace{1.9in}\= \hspace{2.5in}\= \kill % set up two tab positions
-    {\bf Principal Consultant} \> ECSTeam, Inc., now part of CGI \> November 2012–July 2017
-   \end{tabbing}\vspace{-10pt}
-    As a boutique IT consultancy in Denver, CO, my time with ECSTeam first 
-    started as an infrastructure architect for Connect for Health Colorado, 
-    the ACA Exchange for the state of Colorado, based on Oracle's middleware suite. 
-    
-    Later, I became part of a small practice within the company focused on 
-    emerging cloud technologies. As we became a Pivotal Ready Partner, I 
-    participated in Pivotal Cloud Foundry "dojos" beginning in 2016. In that 
-    context, I was involved with many of the same type of engagements that I 
-    lead today.
+After a reorganization in September 2022, our team became focused on quality for
+the consumer-facing parts of the site. This entailed maintaining and improving
+several internal testing tools, including k6 for performance testing, and
+Sitespeed.io for core web vital testing. In addition, we provide reporting tools
+for product quality, including Avalability reporting, defect burndowns, and SEO
+scores. We do this primarily by maintaining tools that extract data from various
+sources of truth and capturing summarized reports in a data warehouse.
 
-   \begin{tabbing}%
-   \hspace{2.9in}\= \hspace{1.5in}\= \kill % set up two tab positions
-   {\bf Advisory Software Engineer}  \> IBM \> June 2003–November 2012
-   \end{tabbing}\vspace{-10pt}
-    My career at IBM was focused on its content management and collaboration 
-    portfolio. I started in QA for the IBM Portal Personalization rules engine. 
-    In 2006, I moved into a development role for the same product.
+We worked to migrate existing tools from a primarily AWS ECS-based deployment
+strategy to EKS-based deployments, and I enjoyed mentoring my team on basic
+k8s topics like RBAC and scheduling, and more advanced topics like custom resource
+definitions and operators.
 
-    Later, I led development efforts to integrate IBM's collaboration tools 
-    Lotus Quickr and IBM Connections with its Enterprise Content Management 
-    portfolio. From there, I moved to IBM SmartCloud, where I focused on 
-    multi-tenancy. All development efforts were full-stack, with custom 
-    Javascript client-side, J2EE back ends, with occasional dabbling in 
-    other technologies (ActiveX, Flash, etc)
+In addition to these primary responsibilities, as the technical lead and senior member
+of the team, I acted as a liaison between management and the team. This involved parsing
+often ambiguous requirements from management and converting them into actionable steps
+for these young, talented engineers. I also enjoyed the opportunity to unofficially
+mentor each of them, both individually and as a group. During that time, I distilled
+complex technical requirements with them, taught them new skills, and acted as a
+guide as they navigate life in a corporate environment, often for the first time in
+their careers.
+\end{position}
 
-\section{SKILLS}          
-    {\bf Programming Languages}: Go, Typescript (full-stack), Java, BASH, Python, Ruby \\
-    {\bf CI/CD}: Concourse CI, CircleCI, ArgoCD, Jenkins, Github Actions \\
-    {\bf Monitoring \& Logging}: InfluxDB, Prometheus, Grafana, AWS Cloudwatch
+\employer{\textbf{Pivotal Software / VMware}}
+\title{\textbf{Staff Solutions Architect}}
+\dates{\textbf{July 2017 – February 2022}}
+\location{}
+\begin{position}
+Along with my world-class team of client-facing Solutions Architects as
+part of VMware Tanzu Labs (formerly Pivotal Labs), I helped my clients transform the way they build
+and run software platforms. My job entailed shepherding a team of client
+platform engineers, product managers, and designers through their journey
+in deploying and effectively using the VMware Tanzu suite and delivering value
+to their customers, which are usually in-house development teams. I focused on building
+Site Reliability Engineering compentencies, as well fostering automation-first,
+security-first architectures.
 
-\section{CERTIFICATIONS}
-    {\bf Certified Kubernetes Administrator} \\
-    Certification Number CKA-2000-007976-0100 \\
-    Earned May 2020
+From May 2020 until my departure in early 2022, I led the delivery of a small in-house SRE team as we piloted
+a new managed service offering for our customers. In this capacity, I was
+able to take the SRE knowledge that we impart to our customer SRE teams,
+implement it myself, and work to continously improve upon that knowledge
+base. I led incident post-mortems with our customers, as well as kept them
+up to date on the health and status of their platform.
+\end{position}
 
-    {\bf Certified Kubernetes Application Developer} \\
-    Certification Number CKAD-2000-003980-0100 \\
-    Earned May 2020
+\employer{\textbf{ECSTeam, Inc., now part of CGI}}
+\title{\textbf{Principal Consultant}}
+\dates{\textbf{November 2012 - July 2017}}
+\location{}
+\begin{position}
+As a boutique IT consultancy in Denver, CO, my time with ECSTeam first
+started as an infrastructure architect for Connect for Health Colorado,
+the ACA Exchange for the state of Colorado, based on Oracle's middleware suite.
+Colorado's Exchange holds the esteemed honor of being the only exchange,
+state or federal, that did not experience an outage on October 1, 2013,
+the day the exchanges were statutorily required to go live.
 
-    {\bf Certified Kubernetes Security Specialist} \\
-    Certification Number LF-2qktgivcfa \\
-    Earned July 2021
- 
-\section{SELECTED SPEAKING}
-    {\bf April 2022} \\
-    Internal realtor.com technical conference - Techcelerate \\
-    On the Benefits of Building and Maintaining a Balanced Product Team
+After that, I worked with a company that provides global imaging for both
+military and commercial customers. Using my polyglot skills, I was tasked
+with, and ultimately successful at, creating a unified system-to-system
+authentication and authorization system. This system had a similar, yet
+still idiomatic to each language, developer experience across their Java,
+Python, and Ruby applications.
 
-    {\bf April 2019} \\
-    Cloud Foundry Summit North America \\
-    \href{https://youtu.be/ydswsuidHn4}{Cracks in the Foundation}
+Later, I became part of a small practice within the company focused on
+emerging cloud technologies. As we became a Pivotal Ready Partner, I
+participated in Pivotal Cloud Foundry engagements beginning in 2016. In that
+context, I was involved with many of the same type of engagements that I
+lead throughout my tenure at Pivotal.
+\end{position}
 
-    {\bf June 2017} \\
-    Cloud Foundry Summit North America \\
-    \href{https://youtu.be/dmUSqX0ELGc}{Using BOSH Addons to Customize your CF Experience}
+\centering{\textbf{\textsl{Further Employment History Available Upon Request}}}
 
-\section{REFERENCES}
-    Available upon request
+\pagebreak
+
+\section{PROGRAMMING LANGUAGES}\vspace{10pt}
+
+\begin{tabularx}{\linewidth}{XXX}
+\textbf{Language} & \textbf{Skill Level} & \textbf{Years Used} \\
+Go & Expert & 2014 – Current \\
+Typescript / Javascript & Expert & 2006 – Present \\
+Java & Advanced & 2006 – 2019 \\
+C\# / .NET & Advanced & 2002 – Present \\
+Python & Intermediate & 2014 – Current \\
+C / C++ & Intermediate & 1997 – 2010 \\
+\end{tabularx}
+
+\section{TECH STACKS}\vspace{10pt}
+\raggedright
+
+\textbf{Cloud Hyperscalers}: AWS, Azure, GCP, Linode, vSphere, Proxmox VE \\
+\textbf{Container Runtimes}: Kubernetes, Docker / Docker Compose, Cloud Foundry \\
+\textbf{Backend Frameworks}: Echo, Fiber, Spring Boot, Express, NestJS, Flask \\
+\textbf{Frontend Frameworks}: React, jQuery, Wails, .NET Maui \\
+\textbf{Databases}: PostgreSQL / PostGIS, MySQL, SQLite, MS SQL Server, Redis, DynamoDB, MongoDB \\
+\textbf{CI/CD}: Github Actions, Concourse CI, CircleCI, ArgoCD \\
+\textbf{Observability}: Prometheus, Loki, Grafana, InfluxDB \\
+
+\section{CERTIFICATIONS}\vspace{10pt}
+{\bf Certified Kubernetes Administrator} \\
+Certification Number \texttt{CKA-2000-007976-0100} \\
+Earned May 2020, Expired May 2023
+
+{\bf Certified Kubernetes Application Developer} \\
+Certification Number \texttt{CKAD-2000-003980-0100} \\
+Earned May 2020, Expired May 2023
+
+{\bf Certified Kubernetes Security Specialist} \\
+Certification Number \texttt{LF-2qktgivcfa} \\
+Earned July 2021, Expired July 2023
+
+\section{SELECTED SPEAKING}\vspace{10pt}
+{\bf April 2022} \\
+Internal realtor.com technical conference - Techcelerate \\
+On the Benefits of Building and Maintaining a Balanced Product Team
+
+{\bf April 2019} \\
+Cloud Foundry Summit North America \\
+\href{https://youtu.be/ydswsuidHn4}{Cracks in the Foundation - Lessons Learned from Operating Platforms at Scale}
+
+\vspace{20pt}
+\centering{\textbf{\textsl{\large{Character and Experience References Available Upon Request}}}}
 
 \end{resume}
 \end{document}
