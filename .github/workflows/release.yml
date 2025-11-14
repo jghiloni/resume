@@ -1,0 +1,19 @@
+name: Create PDF on release
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  create-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: xu-cheng/latex-action@4.0.0
+        with:
+          root_file: resume.tex
+      - name: Release Upload Assets
+        uses: jaywcjlove/github-action-upload-assets@v1.1.1
+        with:
+          asset-path: resume.pdf
