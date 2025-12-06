@@ -1,6 +1,5 @@
 \documentclass{res}
 \usepackage{hyperref}
-\usepackage{tabularx}
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
@@ -16,11 +15,6 @@
 
 \begin{resume}
 
-\section{OBJECTIVE}\vspace{10pt}
-To change the world, of course. I have nearly three decades of experience in the
-technology space and I am obsessed with using that acquired experience and skill
-to make people's lived experiences more rewarding and comfortable.
-
 \section{SELECTED WORK EXPERIENCE}\vspace{10pt}
 
 \employer{\textbf{Havrion, LLC}}
@@ -28,21 +22,28 @@ to make people's lived experiences more rewarding and comfortable.
 \dates{\textbf{August 2024 – November 2025}}
 \location{}
 \begin{position}
+\textsl{Summary} \\
 Havrion is a company in the digital signage space with a simple value proposition:
 You've already spent a ton of money on your displays; you shouldn't need to spend
-more on hardware to make it do what you want it to do.
+more on hardware to make it do what you want it to do. I served as its first VP of
+Engineering, while also contributing significantly to the product and infrastructure
+code.
 
-When I began there, Havrion was tightly coupled to the Samsung ecosystem, with its
-solution running on the Samsung commercial display System-on-a-chip (SOC). My charge
-was to bring modern software practices to a firm that is largely based in the
-hardware world. As part of that charge, I brought the Lean Product Management
-ceremonies learned from my time at Pivotal, as well as modern concepts such as
-continous delivery and observability.
+\textsl{Highlights}
+\begin{itemize}
+  {\item Migrated code and CI/CD pipelines from Azure DevOps to GitHub to take advantage
+  of GitHub and GitHub Actions' more advanced tooling}
+  {\item Designed new Kubernetes-based architecture to reduce cost over Azure Functions-based
+  strategy that was built for a scale that didn't exist and wouldn't for a number of years}
+  {\item Brought TDD and Lean Product Management principles to my team of young engineers and
+  Product Managers, with varying levels of success}
+  {\item Worked to decouple from Samsung's Tizen Ecosystem and refactor into a platform
+  agnostic solution}
+\end{itemize}
 
-I also strived to widen our total addressable market by freeing us from the tight
-bonds with Samsung and moving us to a hardware-agnostic solution. I was nearing
-completion of the first iteration of that effort in November 2025, when a reorganization
-from Havrion's parent company eliminated my position.
+\textsl{Required Skills} \\
+Leadership, Mentorship, Backlog Management, Azure, GitHub, Kubernetes, Typescript, Python, Go,
+React, Angular, Grafana, Mimir, Loki
 \end{position}
 
 \employer{\textbf{Realtor.com}}
@@ -50,32 +51,31 @@ from Havrion's parent company eliminated my position.
 \dates{\textbf{March 2022 – January 2024}}
 \location{}
 \begin{position}
-I was hired at RDC to be the technical lead for the SRE team. We were a small
-team of primarily young engineers, and my goal was to impart my knowledge of SRE
-practices obtained from direct experience and from teaching other teams how to
-effectively implement the teachings in their own organizations.
+\textsl{Summary} \\
+Realtor.com is an online real estate platform that provides comprehensive property listings.
+I worked as a Principal Software Engineer enhancing product quality and developer enablement.
 
-After a reorganization in September 2022, our team became focused on quality for
-the consumer-facing parts of the site. This entailed maintaining and improving
-several internal testing tools, including k6 for performance testing, and
-Sitespeed.io for core web vital testing. In addition, we provide reporting tools
-for product quality, including Avalability reporting, defect burndowns, and SEO
-scores. We do this primarily by maintaining tools that extract data from various
-sources of truth and capturing summarized reports in a data warehouse.
+\textsl{Highlights}
+\begin{itemize}
+  {\item On loan to another team, I developed a super-low-latency (sub 10-ms) DynamoDB-based system for
+  redirecting approximately 30,000 URL patterns from a recent acquisition's legacy platform
+  to their new system using RDC infrastructure}
+  {\item Implemented New Relic-based synthetic monitoring of approximately 25 critical systems,
+  which allowed us to accurately report their rolling 28-day uptime weekly to be shared with
+  senior management; it was often the only system that indicated an outage to a team. This data
+  was then fed into an Apache Airflow workflow that ended up with the data in Snowflake for long-term
+  analytics}
+  {\item Developed a plugin-oriented Go-based CLI called \href{https://github.com/gideaworx/terraform-exporter}{\texttt{terraform-exporter}}
+  that allowed product teams to own their monitors' definitions by exporting the monitors as \texttt{terraform} IaC}
+  {\item Automated generation of quarterly SLO reports intended for SVP+ level executives that previously took
+  a senior direct, principal engineer, and principal project manager approximately 100 person-hours to create}
+  {\item Converted existing ECS-based Playwright infrastructure used by deprecated Jenkins CI/CD pipelines to
+  use Argo Worflows, to be used by CircleCI CI pipelines and ArgoCD Deployments}
+\end{itemize}
 
-We worked to migrate existing tools from a primarily AWS ECS-based deployment
-strategy to EKS-based deployments, and I enjoyed mentoring my team on basic
-k8s topics like RBAC and scheduling, and more advanced topics like custom resource
-definitions and operators.
-
-In addition to these primary responsibilities, as the technical lead and senior member
-of the team, I acted as a liaison between management and the team. This involved parsing
-often ambiguous requirements from management and converting them into actionable steps
-for these young, talented engineers. I also enjoyed the opportunity to unofficially
-mentor each of them, both individually and as a group. During that time, I distilled
-complex technical requirements with them, taught them new skills, and acted as a
-guide as they navigate life in a corporate environment, often for the first time in
-their careers.
+\textsl{Required Skills} \\
+Mentorship, Observability, Go, Typescript, NestJS, Python, AWS, DynamoDB, CircleCI, ECS, EKS,
+RDS, Snowflake, Airflow, CloudFormation, Terraform, k6, InfluxDB, Grafana
 \end{position}
 
 \employer{\textbf{Pivotal Software / VMware}}
@@ -83,6 +83,7 @@ their careers.
 \dates{\textbf{July 2017 – February 2022}}
 \location{}
 \begin{position}
+\textsl{Summary} \\
 Along with my world-class team of client-facing Solutions Architects as
 part of VMware Tanzu Labs (formerly Pivotal Labs), I helped my clients transform the way they build
 and run software platforms. My job entailed shepherding a team of client
@@ -92,12 +93,25 @@ to their customers, which are usually in-house development teams. I focused on b
 Site Reliability Engineering compentencies, as well fostering automation-first,
 security-first architectures.
 
-From May 2020 until my departure in early 2022, I led the delivery of a small in-house SRE team as we piloted
-a new managed service offering for our customers. In this capacity, I was
-able to take the SRE knowledge that we impart to our customer SRE teams,
-implement it myself, and work to continously improve upon that knowledge
-base. I led incident post-mortems with our customers, as well as kept them
-up to date on the health and status of their platform.
+\textsl{Highlights}
+\begin{itemize}
+  {\item Taught customers TDD, XP, and Lean Product Management in the context of
+  managing an in-house PaaS}
+  {\item Developed \href{https://concourse-ci.org}{Concourse CI} pipelines with customers
+  to automate patch and upgrade management of products associated with PCF and later Tanzu}
+  {\item Taught customers to build and maintain a curated backlog in concert with my Product
+  Management counterpart}
+  {\item Built a product with a small subteam that allowed customers who were using versions
+  of our product that were too old to upgrade to stand up a new instance at the latest version
+  and migrate the state of their existing instance to the new instance, including state and
+  all workloads}
+  {\item Led delivery of a pilot managed service offering; as the customer's in-house SRE team,
+  we nearly automated ourselves out of work with automated upgrades and proactive SLO alerting}
+\end{itemize}
+
+\textsl{Required Skills}\\
+Customer Communication, ``Commanding the Room'', Concourse CI, Pivotal Cloud Foundry / Tanzu Application
+Service, Go, React, Java, BASH, Kubernetes, AWS, GCP, Azure, vSphere, BOSH, Terraform, AWS CloudFormation
 \end{position}
 
 \employer{\textbf{ECSTeam, Inc., now part of CGI}}
@@ -105,78 +119,99 @@ up to date on the health and status of their platform.
 \dates{\textbf{November 2012 - July 2017}}
 \location{}
 \begin{position}
-As a boutique IT consultancy in Denver, CO, my time with ECSTeam first
-started as an infrastructure architect for Connect for Health Colorado,
-the ACA Exchange for the state of Colorado, based on Oracle's middleware suite.
-Colorado's Exchange holds the esteemed honor of being the only exchange,
-state or federal, that did not experience an outage on October 1, 2013,
-the day the exchanges were statutorily required to go live.
+\textsl{Summary} \\
+As a boutique IT consultancy in Denver, CO, I received praise from both customers
+and coworkers for the solutions I delivered and my manner dealing with all levels
+of technical acumen I encountered
 
-After that, I worked with a company that provides global imaging for both
-military and commercial customers. Using my polyglot skills, I was tasked
-with, and ultimately successful at, creating a unified system-to-system
-authentication and authorization system. This system had a similar, yet
-still idiomatic to each language, developer experience across their Java,
-Python, and Ruby applications.
+\textsl{Highlights}
+\begin{itemize}
+{\item Was half of the infrastructure architecture team for Connect for Health Colorado,
+Colorado's ACA exchange. Due to design choices we made from a user experience and
+infrastructure perspective, C4HCO holds the esteemed honor of being the only exchange
+without an outage on October 1, 2013, the day the exchanges went live}
+{\item Developed a custom SFTP solution that allowed us to accept EDI files from roughly
+35 different insurance providers in a zero-trust manner. When files arrived, we validated
+them, and did minimal normalization before passing them to Oracle's Healthcare Adapter for
+further processing}
+{\item At a client in the space industry, deployed UAA—Cloud Foundry's OAuth2 authorization
+server—for service to service communication, along with a simple SDK for creating secured
+API endpoints, that was both similar to its counterparts while still being idiomatic Java,
+Python, and Ruby}
+{\item Was a founding member of ECSTeam's Cloud Native Practice, focusing on partnering with
+Pivotal to provide post-sales delivery for the Pivotal team on a subcontracted basis}
+\end{itemize}
 
-Later, I became part of a small practice within the company focused on
-emerging cloud technologies. As we became a Pivotal Ready Partner, I
-participated in Pivotal Cloud Foundry engagements beginning in 2016. In that
-context, I was involved with many of the same type of engagements that I
-lead throughout my tenure at Pivotal.
+\textsl{Required Skills}\\
+Java, Spring Boot, Python, Ruby, BASH, Concourse CI, Jenkins, Apache ANT, BOSH, Pivotal Cloud
+Foundry, Open Source Cloud Foundry, OpenStack, AWS, GCP
 \end{position}
 
-\centering{\textbf{\textsl{Further Employment History Available Upon Request}}}
+\centering{\textbf{\textsl{Further Employment History and Speaking Engagements Available Upon Request}}}
 
-\pagebreak
+\section{SKILLS}
+\begin{itemize}
+  {\item \textbf{Languages}: Go, Java, Javascript, Typescript, BASH, C\#, C, C++, Python, Ruby}
+  {\item \textbf{IaaS}: AWS, GCP, Azure, vSphere, Proxmox VE}
+  {\item \textbf{PaaS}: EKS, AKS, GKE, on-premise K8s, Cloud Foundry}
+  {\item \textbf{IaC}: Terraform, AWS CloudFormation, BOSH, Pulumi}
+  {\item \textbf{Frameworks}: Spring Boot, ReactJS, NestJS, Next.js, Angular}
+  {\item \textbf{Containerization}: Docker, Kubernetes, Colima, Cloud Native Buildpacks}
+  {\item \textbf{Databases}: PostgreSQL / PostGIS, MySQL, SQLite, MS SQL Server, Redis, DynamoDB, MongoDB}
+  {\item \textbf{CI/CD}: Github Actions, Concourse CI, CircleCI, ArgoCD}
+  {\item \textbf{Observability}: Prometheus, Loki, Grafana, Mimir, Jaeger, InfluxDB}
+  {\item \textbf{\textsl{``Etc''}}: Leadership, Mentorship, Backlog Management, Public Speaking / Presenting,
+  TDD, XP, Lean Product Management, Agile}
+\end{itemize}
+% \pagebreak
 
-\section{PROGRAMMING LANGUAGES}\vspace{10pt}
+% \section{PROGRAMMING LANGUAGES}\vspace{10pt}
 
-\begin{tabularx}{\linewidth}{XXX}
-\textbf{Language} & \textbf{Skill Level} & \textbf{Years Used} \\
-Go & Expert & 2014 – Present \\
-Typescript / Javascript & Expert & 2006 – Present \\
-Java & Advanced & 2006 – 2019 \\
-C\# / .NET & Advanced & 2002 – Present \\
-Python & Intermediate & 2014 – Present \\
-C / C++ & Intermediate & 1997 – 2010 \\
-\end{tabularx}
+% \begin{tabularx}{\linewidth}{XXX}
+% \textbf{Language} & \textbf{Skill Level} & \textbf{Years Used} \\
+% Go & Expert & 2014 – Present \\
+% Typescript / Javascript & Expert & 2006 – Present \\
+% Java & Advanced & 2006 – 2019 \\
+% C\# / .NET & Advanced & 2002 – Present \\
+% Python & Intermediate & 2014 – Present \\
+% C / C++ & Intermediate & 1997 – 2010 \\
+% \end{tabularx}
 
-\section{TECH STACKS}\vspace{10pt}
-\raggedright
+% \section{TECH STACKS}\vspace{10pt}
+% \raggedright
 
-\textbf{Cloud Hyperscalers}: AWS, Azure, GCP, Linode, vSphere, Proxmox VE \\
-\textbf{Container Runtimes}: Kubernetes, Docker / Docker Compose, Cloud Foundry \\
-\textbf{Backend Frameworks}: Echo, Fiber, Spring Boot, Express, NestJS, Flask \\
-\textbf{Frontend Frameworks}: React, jQuery, Wails, .NET Maui \\
-\textbf{Databases}: PostgreSQL / PostGIS, MySQL, SQLite, MS SQL Server, Redis, DynamoDB, MongoDB \\
-\textbf{CI/CD}: Github Actions, Concourse CI, CircleCI, ArgoCD \\
-\textbf{Observability}: Prometheus, Loki, Grafana, InfluxDB \\
+% \textbf{Cloud Hyperscalers}: AWS, Azure, GCP, Linode, vSphere, Proxmox VE \\
+% \textbf{Container Runtimes}: Kubernetes, Docker / Docker Compose, Cloud Foundry \\
+% \textbf{Backend Frameworks}: Echo, Fiber, Spring Boot, Express, NestJS, Flask \\
+% \textbf{Frontend Frameworks}: React, jQuery, Wails, .NET Maui \\
+% \textbf{Databases}: PostgreSQL / PostGIS, MySQL, SQLite, MS SQL Server, Redis, DynamoDB, MongoDB \\
+% \textbf{CI/CD}: Github Actions, Concourse CI, CircleCI, ArgoCD \\
+% \textbf{Observability}: Prometheus, Loki, Grafana, InfluxDB \\
 
-\section{CERTIFICATIONS}\vspace{10pt}
-{\bf Certified Kubernetes Administrator} \\
-Certification Number \texttt{CKA-2000-007976-0100} \\
-Earned May 2020, Expired May 2023
+% \section{CERTIFICATIONS}\vspace{10pt}
+% {\bf Certified Kubernetes Administrator} \\
+% Certification Number \texttt{CKA-2000-007976-0100} \\
+% Earned May 2020, Expired May 2023
 
-{\bf Certified Kubernetes Application Developer} \\
-Certification Number \texttt{CKAD-2000-003980-0100} \\
-Earned May 2020, Expired May 2023
+% {\bf Certified Kubernetes Application Developer} \\
+% Certification Number \texttt{CKAD-2000-003980-0100} \\
+% Earned May 2020, Expired May 2023
 
-{\bf Certified Kubernetes Security Specialist} \\
-Certification Number \texttt{LF-2qktgivcfa} \\
-Earned July 2021, Expired July 2023
+% {\bf Certified Kubernetes Security Specialist} \\
+% Certification Number \texttt{LF-2qktgivcfa} \\
+% Earned July 2021, Expired July 2023
 
-\section{SELECTED SPEAKING}\vspace{10pt}
-{\bf April 2022} \\
-Internal realtor.com technical conference - Techcelerate \\
-On the Benefits of Building and Maintaining a Balanced Product Team
+% \section{SELECTED SPEAKING}\vspace{10pt}
+% {\bf April 2022} \\
+% Internal realtor.com technical conference - Techcelerate \\
+% On the Benefits of Building and Maintaining a Balanced Product Team
 
-{\bf April 2019} \\
-Cloud Foundry Summit North America \\
-\href{https://youtu.be/ydswsuidHn4}{Cracks in the Foundation - Lessons Learned from Operating Platforms at Scale}
+% {\bf April 2019} \\
+% Cloud Foundry Summit North America \\
+% \href{https://youtu.be/ydswsuidHn4}{Cracks in the Foundation - Lessons Learned from Operating Platforms at Scale}
 
 \vspace{20pt}
-\centering{\textbf{\textsl{\large{Character and Experience References Available Upon Request}}}}
+\centering{\textbf{\textsl{\large{Character and Skills References Available Upon Request}}}}
 
 \end{resume}
 \end{document}
